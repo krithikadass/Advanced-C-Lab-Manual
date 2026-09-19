@@ -1,4 +1,5 @@
-EXP NO:2 C PROGRAM FOR PASSING STRUCTURES AS FUNCTION ARGUMENTS AND RETURNING A STRUCTURE FROM A FUNCTION
+## EXP NO:2 C PROGRAM FOR PASSING STRUCTURES AS FUNCTION ARGUMENTS AND RETURNING A STRUCTURE FROM A FUNCTION
+
 Aim:
 To write a C program for passing structure as function and returning a structure from a function
 
@@ -13,18 +14,46 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+#include <stdio.h>
+struct Input
+{
+    int x;
+    int y;
+};
+
+struct Output
+{
+    int sum;
+};
+
+struct Output add(struct Input in) 
+{
+    struct Output out;
+    out.sum = in.x + in.y;
+    return out;
+}
+
+int main() {
+    struct Input values;
+    struct Output result;
+    scanf("%d", &values.x);
+    scanf("%d", &values.y);
+    result = add(values);
+    printf("%d\n", result.sum);
+
+    return 0;
+}
+```
 
 
 
 
 Output:
 
-//paste your output screenshots here
-
-
-
+<img width="884" height="316" alt="image" src="https://github.com/user-attachments/assets/4ac0aa2d-c5d2-4538-b537-f47487a7aa62" />
 
 
 Result:
+
 Thus, the program is verified successfully
